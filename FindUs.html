@@ -1,0 +1,115 @@
+<!-- Jason Milne - 27239398 - 10/06/2023 - Version 1.1 -->
+<!-- Mad Marks gaming empiriom -->
+<!doctype html>
+<html>
+  <!-- 
+    Creating a head tag with relevant information such as the character set used and the device width and scale
+    Then including Tailwind CSS format into the document
+    Finally adding an icon and title
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="icon.png">
+  <title>Contact Us</title>
+  
+</head>
+<body>
+  <!-- Using taiwlind to style divs, this div sets the view width to 100% and on medium
+  device width hides the over flow and on all devices sets the height to 100% 
+  of the device-->
+  <div class="w-[100vw] md:overflow-hidden overflow-x-hidden h-[100vh]">
+    <!-- Using tailwind to set the background to green, height to 13% of device and 
+    width to 100%, using flex and flex-col with justify between and setting it to 
+    relative
+  -->
+    <div class="bg-green-500 h-[13vh] w-[100vw] flex flex-col justify-between relative">
+     <div class="wrapper">
+      <!-- Creating a div wrapper to hold the contents of the Navbar using flex
+      to layout the navbar and using medium width to change the navbar 
+    to flex grow when width is medium, also using flex-row and spacing the contents
+  of the navbar using space-x -->
+         <ul class=" flex md:flex md:flex-grow flex-row space-x-7">
+          <!-- Creating a list to hold the links and setting the image
+          on the navbar to a width of 125px and height of 50 veiw height with
+        a margin left of 1 in tailwind-->
+             <li><div class="w-[125px] h-[50vh] ml-1 "><img src="logo.png" alt="Image containing a computer and the caption mad marks games"></div></li>
+             <!-- Using padding of 2 and a padding top of 7 with text sizing either 2md or 4sm
+                  and changing the colour to white whilst also changing the text size
+                  when different devices interact with the site-->
+             <li class="p-2 pt-7 text-2md md:text-2xl text-white"><a href="index.html">About</a></li>
+             <li class="p-2 pt-7 text-4sm md:text-2xl text-white"><a href="FindUs.html">Contact Us</a></li>
+             <li class="p-2 pt-7 text-4sm md:text-2xl text-white"><a href="Search.html">Search</a></li>
+             
+         </ul>
+         
+         
+     </div>
+     
+   </div>
+   <!-- Setting the height to 100 Veiw Height, width to 100 veiw width
+        and setting the background to blue with padding on the y axis
+        of a default setting of 20 and setting it to relative with
+        scroll bar set to auto-->
+  <div class="h-[100vh] w-[100vw] bg-blue-500 py-20 relative overflow-y-auto" >
+    
+    <!-- Setting the div to flex, flex row and justifying the contents inline
+            whilst changing the text to black and the width to 75 View Width and on
+            medium devices changing the view width to 62 and whilst small devices
+            having a height of 150px and on large devices a width of 44 view width and a 
+            height of 19 veiw height with padding bot of 3 and a margin bot of 10 
+            whilst changing the margin left on differnt device widths and
+            including rounded borders and a background of yellow-->
+    <div class="flex flex-row justify-inline text-black md:w-[62vw] lg:h-[150px] w-[65vw] md:h-[150px] sm:h-[150px]  lg:w-[44vw]   pb-3 mb-10 lg:ml-96 md:ml-80 ml-20 rounded-md bg-yellow-200">
+      <!-- Setting the text size to 4xl and on medium devices a padding left of 24 
+             on normal devices having a padding left of 10 and padding top of 8 
+             and padding bot of 4 whilst aligning the items in the center-->
+      <h1 class="text-4xl md:mt-0 md:pl-48 pl-10 pt-12 pb-4 items-center">Get in touch!</h1>
+    </div>
+    <!-- Setting the contents of this div to flex flex-row and justified inline-->
+    <div class="flex flex-row justify-inline">
+      
+      <!-- Setting device width to 55 view width on medium devices with width 
+      set to 75 view width otherwise and height set to 600 pixels with
+      padding of 20 and margin left of 20 with a white background 
+      and rounded borders and text set to xl or 3xl on medium devices-->
+      <div class="md:w-[55vw] w-[75vw] h-[600px]  p-20 mt-0 ml-20 bg-white rounded-md text-xl md:text-3xl ">
+        
+        <!-- Using labels and line breaks to display the information-->
+        <label class="">Contact Details:</label>
+        <br>
+        <br>
+        <label>Phone Number: <br> +44789123456 </label>
+        <br>
+        <br>
+        <label>Email:</label>
+        <br>
+        <br>
+        <label>MadMarks@games.ac.uk</label>
+        <br>
+        <br>
+          
+          
+        <label class="">Address:</label>
+        <br>
+        <label>23 Elgin Street</label>
+        <br>
+        <label>Elgin</label>
+        <br>
+        <label>AB40 4YB</label>
+        
+        
+      </div>
+      <!-- Setting view width to 29 view width and margin left of 20-->
+      <div class="w-[29vw] ml-20 ">
+        <!-- Setting the image to only appear on full screen -->
+        <img class="hidden md:block " src="logo.png" alt="Image containing a computer and the caption mad marks games">
+      </div>
+  </div>
+  </div>
+  </div>
+  
+</body>
+
+</html>

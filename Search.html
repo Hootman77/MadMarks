@@ -1,0 +1,134 @@
+<!-- Jason Milne - 27239398 - 10/06/2023 - Version 1.1 -->
+<!-- Mad Marks gaming empiriom -->
+<!doctype html>
+<html>
+   <!-- 
+    Creating a head tag with relevant information such as the character set used and the device width and scale
+    Then including Tailwind CSS format into the document
+    Finally adding an icon and title
+  -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="icon.png">
+  <title>Search Page</title>
+  
+</head>
+<body>
+  
+  <!-- Using taiwlind to style divs, this div sets the view width to 100% and on medium
+  device width hides the over flow and on all devices sets the height to 100% 
+  of the device-->
+  <div class="w-[100vw] md:overflow-hidden overflow-x-hidden h-[100vh]">
+     <!-- Using tailwind to set the background to green, height to 13% of device and 
+    width to 100%, using flex and flex-col with justify between and setting it to 
+    relative
+  -->
+   <div class="bg-green-500 h-[13vh] w-[100vw] flex flex-col justify-between relative">
+    <div class="wrapper">
+      <!-- Creating a div wrapper to hold the contents of the Navbar using flex
+        to layout the navbar and using medium width to change the navbar 
+        to flex grow when width is medium, also using flex-row and spacing the contents
+        of the navbar using space-x -->
+        <ul class=" flex md:flex md:flex-grow flex-row space-x-1 space-x-7">
+          <!-- Creating a list to hold the links and setting the image
+          on the navbar to a width of 125px and height of 50 veiw height with
+          a margin left of 1 in tailwind-->
+            <li><div class="w-[125px] h-[50vh] ml-1 "><img src="logo.png" alt="Image containing a computer and the caption mad marks games" ></div></li>
+            <!-- Using padding of 2 and a padding top of 7 with text sizing either 2md or 4sm
+              and changing the colour to white whilst also changing the text size
+              when different devices interact with the site-->
+            <li class="p-2 pt-7 text-2md md:text-2xl text-white"><a href="index.html">About</a></li>
+            <li class="p-2 pt-7 text-4sm md:text-2xl text-white"><a href="FindUs.html">Contact Us</a></li>
+            <li class="p-2 pt-7 text-4sm md:text-2xl text-white"><a href="Search.html">Search</a></li>
+            
+        </ul>
+        
+        
+    </div>
+    
+  </div>
+  
+   
+
+      <!-- Setting the height to 100 Veiw Height, width to 100 veiw width
+        and setting the background to blue with padding on the y axis
+        of a default setting of 20 and setting it to relative with
+        scroll bar set to auto-->
+   <div class="h-[100vh] w-[100vw] overflow-auto flex flex-col bg-blue-500 py-20 relative" >
+    <!-- Setting the div to flex, flex row and justifying the contents inline
+            whilst changing the text to black and the width to 75 View Width and on
+            medium devices changing the view width to 62 and whilst small devices
+            having a height of 150px and on large devices a width of 44 view width and a 
+            height of 19 veiw height with padding bot of 3 and a margin bot of 10 
+            whilst changing the margin left on differnt device widths and
+            including rounded borders and a background of yellow-->
+    <div class="flex flex-col justify-between text-black md:w-[62vw] w-[75vw] sm:h-[100px]  lg:w-[44vw] lg:h-[55vh] md:h-[43vh] pb-3 mb-10 lg:ml-96 md:ml-80 ml-20 rounded-md bg-yellow-200">
+      <!-- Setting the text size to 4xl and on medium devices a padding left of 24 
+             on normal devices having a padding left of 10 and padding top of 8 
+             and padding bot of 4 whilst aligning the items in the center-->
+      <h1 class="text-4xl md:mt-0 md:pl-24 pl-10 pt-8 pb-4 items-center">Welcome to the search page</h1>
+    </div>
+
+    <!-- Setting the width to 98 view width and setting it to flex flex-col and 
+    relative-->
+    <div class="w-[98vw] flex flex-col relative">
+      <div>
+        <!-- Creating a label for the search title to be included and setting it to
+        a margin left of 96 with medium devices and flex flex-col with content 
+        justified between and a margin of 20 on other devices with 
+        a white background and padding of 4 with rounded corners to xl and on medium devices 
+        a padding left of 36 and text 4 xl and on medium devices changing the width to 650 pixels-->
+        <label for="search" class="md:mx-96 flex flex-col justify-between mx-20 bg-white p-4 rounded-xl md:pl-36 text-4xl md:w-[650px] relative ">Search database </label>
+      </div>
+      <!-- Setting the form width to 50 view width and flex flex-col with content
+        justified in the center and a margin top of 8 and relative-->
+      <form class="w-[50vw] flex flex-col justify-center mt-8 relative ">
+        <!-- creating an input field to enter data into, setting it to rounded medium 
+        with a padding of 2 and on medium devices a width of 85 view height and on 
+        small devices a width of 50 view height other wise a width of 40 view height
+        and on medium devices setting the margin left to 96 otherwise a margin left
+        of 20 and giving it an id to use in javascript-->
+        <input type="search" class="rounded-md p-2 md:w-[85vh] sm:w-[50vh] w-[40vh] md:ml-96 ml-20" id="search" data-search>
+        
+        <!-- creating a button within an onclick function to call the Input function 
+             from the javascript, setting the button width to 85 view height on medium devices
+             and on small devices a 50 veiw height whilst normally being at 40 view eight
+             setting the margin top to 10 and justifying content in the center
+             in a flex layout with background green and on medium width a margin left of
+             96 otherwise a margin left of 20 and text set to 2 xl and rounded
+             borders and padding of 2 -->
+        <button type="button" onclick="Input()" class="md:w-[85vh] sm:w-[50vh] w-[40vh] mt-10 justify-center flex bg-green-200 md:ml-96 ml-20 pl-0 text-2xl rounded-md p-2">Submit</button>
+      </form>
+
+      <!-- Setting the text to small size 2 and width to 100 view width and height 100 veiw height with the scroll bar
+      hidden on the x axis and background of blue, also including a reference called output-container which is used
+      in javascript-->
+      <div class="text-2sm w-[100vw] h-[100vh] overflow-auto bg-blue-500" output-container>
+
+        <div class="">
+          <!-- Creating a template which will be used to output the data onto the screen-->
+          <template card-container>
+            <div class="card overflow-auto " id="cards">
+              <!-- Setting the output text to white and on medium devices setting the margin
+              on the x axis to 96--> <!-- In the next div setting the output text to black also 
+              with a margin of 96 on medium devices on the x axis-->
+            <label class="text-white md:mx-96">Result:<div class="output1 text-black md:mx-96 " output-1></div></label>
+            </div>
+            
+          </template>
+          
+        </div>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+
+  <!-- linking the javascript file-->
+<script src="./search.js"></script>
+</body>
+
+</html>
